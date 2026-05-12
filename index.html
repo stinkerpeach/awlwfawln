@@ -585,10 +585,9 @@ const rockAudios = {};
 for (let i = 1; i <= 12; i++) {
   const btn = document.createElement('button');
   btn.className = 'rock-item';
-  const labelIdx = String(i - 1).padStart(4, '0');
   btn.innerHTML = `
     <img class="rock-img"   src="rock png library/rock${i}.png" alt="rock ${i}">
-    <img class="rock-label" src="rock labels/_${labelIdx}_label${i}.png" alt="label ${i}">
+    <img class="rock-label" src="rock labels/label${i}.png" alt="label ${i}">
   `;
   btn.addEventListener('click', () => {
     if (!rockAudios[i]) rockAudios[i] = new Audio(`sounds/sound${i}.wav`);
